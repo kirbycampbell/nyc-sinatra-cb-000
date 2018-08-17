@@ -2,6 +2,7 @@ class LandmarksController < ApplicationController
 
   get '/landmarks' do
     @landmarks = Landmark.all
+    #@figures = Figure.all
     erb :'/landmarks/index'
   end
 
@@ -11,7 +12,7 @@ class LandmarksController < ApplicationController
 
   post '/landmarks' do
     @landmark = Landmark.create(params[:landmark])
-    redirect('/landmarks')
+    redirect '/landmarks'
   end
 
 end
